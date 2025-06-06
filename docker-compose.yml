@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  reactjs:
+    image: node:18
+    container_name: reactjs
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    command: sh -c "yarn install && yarn start"
+    ports:
+      - '3000:3000'
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
