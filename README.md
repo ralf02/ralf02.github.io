@@ -1,11 +1,11 @@
 # Rafael Contreras
-**Full Stack Developer | DevOps**
+**Software Engineer | DevOps | FullStack Developer | PHP | Node.js | Java**
 
 ---
 
 ## Sobre mí
 
-Hola mundo, Soy desarrollador web con sólida de experiencia en el diseño, desarrollo y despliegue de aplicaciones. Domino stacks como **LEMP, MEAN y Java SpringBoot**, y tengo experiencia en **DevOps con Docker y GitLab CI/CD**.
+Hola mundo, Soy desarrollador web con sólida de experiencia en el diseño, desarrollo y despliegue de aplicaciones. Domino stacks como **LEMP, MEAN y Java SpringBoot**, tengo experiencia en **DevOps con Docker y GitLab CI/CD**.
 
 He trabajado en proyectos de alto impacto, optimizando pipelines de integración y entrega continua, construyendo soluciones robustas y adaptadas a entornos de desarrollo, calidad y producción.
 
@@ -44,7 +44,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 ## Contacto
 
 - **Email**: rafael.contreras@mail.faba.edu.co
-- **GitHub**: [https://ralf02.github.io](https://ralf02.github.io/)
+- **GitHub**: [https://github.com/ralf02](https://github.com/ralf02)
 - **LinkedIn**: [linkedin.com/in/rafiko](https://linkedin.com/in/rafiko)
 
 ---
