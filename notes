@@ -1,5 +1,6 @@
 npm install tailwindcss
 npx tailwindcss init -p
 
-
+rm -rf build
+npm run build
 npm run deploy
