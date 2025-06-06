@@ -88,7 +88,7 @@ function App() {
           <h2 className="text-xl font-semibold border-b pb-1 border-gray-300 dark:border-gray-600">Contacto</h2>
           <ul className="mt-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li><strong>Email:</strong> rafael.contreras@mail.faba.edu.co</li>
-            <li><strong>GitHub:</strong> <a href="https://ralf02.github.io" className="text-blue-600 dark:text-blue-400 hover:underline">ralf02.github.io</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/ralf02" className="text-blue-600 dark:text-blue-400 hover:underline">ralf02.github.io</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rafiko" className="text-blue-600 dark:text-blue-400 hover:underline">linkedin.com/in/rafiko</a></li>
           </ul>
         </section>
