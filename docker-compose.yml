@@ -3,7 +3,7 @@ version: '3.8'
 services:
   reactjs:
     image: node:18
-    container_name: reactjs
+    container_name: ralf02.github.io
     restart: always
     working_dir: /app
     volumes:
