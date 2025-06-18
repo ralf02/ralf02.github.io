@@ -23,23 +23,24 @@ function App() {
 
   const portfolioItems = [
     {
-      title: 'Plataforma CI/CD con Docker Swarm y GitLab',
-      description: 'Implementación de CI/CD multiplataforma con GitLab Runner sin instalación local.',
-      image: '/portfolio/ci-cd.jpg',
-      tags: ['DevOps', 'Docker', 'GitLab']
+      title: 'DevOps',
+      description: 'Automatización de flujos CI/CD con GitLab, configuración de runners con Shell Scripting y despliegue de entornos con Ansible y Docker Swarm.',
+      image: '/portfolio/devops.jpg',
+      tags: [ 'Docker Swarm', 'GitLab CI/CD', 'Ansible']
     },
     {
-      title: 'Sistema de Streaming Portable',
-      description: 'Desarrollo de sistema de transmisión estable online/offline usando Raspbian y Wowza/NGINX.',
-      image: '/portfolio/streaming.jpg',
-      tags: ['Raspberry Pi', 'Streaming', 'NGINX']
+      title: 'Desarrollo Web',
+      description: 'Desarrollo full-stack con LEMP, MERN y Spring Boot, creando APIs REST, personalizando CMS (Drupal, WordPress) y construyendo interfaces escalables y funcionales.',
+      image: '/portfolio/web.jpg',
+      tags: ['PHP', 'Node.js','Next.js', 'Nginx', 'Html', 'Raspberry Pi', 'Streaming']
     },
     {
-      title: 'Aplicaciones Web',
-      description: 'Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.',
-      image: '/portfolio/web-apps.jpg',
-      tags: ['Next.js', 'Angular', 'shadcn/ui']
-    }
+      title: 'Laboratorios',
+      description: 'Exploro soluciones en la nube con AWS, Kubernetes y Terraform. Pruebo arquitecturas escalables y el desarrollo agentes inteligentes con IA generativa, enfocándome en eficiencia, innovación y aprendizaje continuo.',
+      image: '/portfolio/labs.jpg',
+      tags: ['K8s', 'aws','Raspberry Pi', 'Streaming', 'Nginx', 'shadcn/ui']
+    },
+
   ];
 
   return (
@@ -76,7 +77,7 @@ function App() {
         >
           <MessageCircle className="w-5 h-5" />
           <span className="text-sm font-medium">Ask Rafiko</span>
-          <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <span className="absolute px-2 py-1 mb-2 text-xs text-white transition-opacity duration-300 -translate-x-1/2 bg-gray-800 rounded opacity-0 pointer-events-none bottom-full left-1/2 whitespace-nowrap group-hover:opacity-100">
                Estoy aqui para aclararte dudas ;) <br /> coming soon!
            </span>
         </button>
@@ -89,7 +90,7 @@ function App() {
           <img
             src="/foto.jpg"
             alt="Foto de perfil"
-            className="object-cover w-80 h-80 mx-auto mb-8 border-4 border-white rounded-full shadow-lg"
+            className="object-cover mx-auto mb-8 border-4 border-white rounded-full shadow-lg w-80 h-80"
           />
           <h1 className="mb-4 text-5xl font-bold text-white">Rafael Contreras</h1>
           <p className="text-xl text-gray-300">Software Engineer | DevOps | FullStack Developer</p>
