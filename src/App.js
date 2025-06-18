@@ -10,10 +10,14 @@ import {
   Layout,
   Database,
   Video,
-  TestTube2
+  TestTube2,
+  X
 } from 'lucide-react';
+import { useState } from 'react';
 
 function App() {
+  const [selectedPortfolio, setSelectedPortfolio] = useState(null);
+
   const socialLinks = [
     { icon: Github, href: 'https://github.com/ralf02', label: 'GitHub', val: 'ralf02' },
     { icon: Gitlab, href: 'https://gitlab.com/ralf02', label: 'GitLab', val: 'ralf02'},
@@ -45,37 +49,68 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-['Work_Sans']">
+      {/* Portfolio Modal */}
+      {selectedPortfolio && (
+        <div className="flex fixed inset-0 z-50 justify-center items-center bg-black/50">
+          <div className="relative w-full max-w-4xl max-h-[90vh] mx-4 bg-white rounded-lg shadow-xl">
+            {/* Modal Header */}
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-xl font-semibold text-gray-900">{selectedPortfolio.title}</h3>
+              <button
+                onClick={() => setSelectedPortfolio(null)}
+                className="p-1 text-gray-500 rounded-full transition-colors hover:bg-gray-100"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-8rem)]">
+              <div className="flex flex-col justify-center items-center py-12 text-center">
+                <h4 className="mb-4 text-2xl font-semibold text-gray-900">Coming Soon</h4>
+                <p className="text-gray-600">Estamos trabajando en el contenido detallado de este proyecto.</p>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex gap-4 justify-center p-4 border-t">
+              <span className="text-sm font-medium text-gray-600">- "Moliendo Café" ☕ -</span>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Floating Social Menu */}
-      <div className="fixed z-50 flex-col hidden gap-4 -translate-y-1/2 right-8 top-1/2 md:flex">
+      <div className="hidden fixed right-8 top-1/2 z-50 flex-col gap-4 -translate-y-1/2 md:flex">
         {socialLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-900 rounded-full shadow-lg group hover:bg-gray-800"
+            className="flex relative justify-center items-center w-12 h-12 text-white bg-gray-900 rounded-full shadow-lg transition-colors group hover:bg-gray-800"
             aria-label={link.label}
           >
             <link.icon className="w-6 h-6" />
-            <span className="absolute px-3 py-2 mr-3 text-sm font-medium text-white transition-all duration-200 bg-gray-900 border border-gray-700 rounded-lg shadow-lg opacity-0 right-full whitespace-nowrap group-hover:opacity-100">
+            <span className="absolute right-full px-3 py-2 mr-3 text-sm font-medium text-white whitespace-nowrap bg-gray-900 rounded-lg border border-gray-700 shadow-lg opacity-0 transition-all duration-200 group-hover:opacity-100">
               <span className="text-gray-400">{link.label}</span>
               <span className="mx-1 text-gray-500">:</span>
               <span className="text-white">{link.val}</span>
-              <span className="absolute w-2 h-2 rotate-45 -translate-y-1/2 bg-gray-900 border-b border-r border-gray-700 -right-1 top-1/2"></span>
+              <span className="absolute -right-1 top-1/2 w-2 h-2 bg-gray-900 border-r border-b border-gray-700 rotate-45 -translate-y-1/2"></span>
             </span>
           </a>
         ))}
       </div>
 
       {/* Mobile Social Menu */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center gap-4 p-4 bg-gray-900 md:hidden">
+      <div className="flex fixed right-0 bottom-0 left-0 z-50 gap-4 justify-center p-4 bg-gray-900 md:hidden">
         {socialLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 text-white transition-colors bg-gray-800 rounded-full shadow-lg hover:bg-gray-700"
+            className="flex justify-center items-center w-10 h-10 text-white bg-gray-800 rounded-full shadow-lg transition-colors hover:bg-gray-700"
             aria-label={link.label}
           >
             <link.icon className="w-5 h-5" />
@@ -84,27 +119,27 @@ function App() {
       </div>
 
       {/* Floating Chatbot Button */}
-      <div className="fixed z-50 right-4 bottom-4 md:right-8 md:bottom-8">
+      <div className="fixed right-4 bottom-4 z-50 md:right-8 md:bottom-8">
         <button
-          className="relative flex items-center gap-2 px-3 py-2 text-sm text-white transition-colors bg-gray-900 rounded-full shadow-lg md:text-base md:px-4 group hover:bg-gray-800"
+          className="flex relative gap-2 items-center px-3 py-2 text-sm text-white bg-gray-900 rounded-full shadow-lg transition-colors md:text-base md:px-4 group hover:bg-gray-800"
           aria-label="Chatbot (Coming Soon)"
         >
           <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
           <span className="hidden text-sm font-medium md:inline">Ask Rafiko</span>
-          <span className="absolute px-2 py-1 mb-2 text-xs text-white transition-opacity duration-300 -translate-x-1/2 bg-gray-800 rounded opacity-0 pointer-events-none bottom-full left-1/2 whitespace-nowrap group-hover:opacity-100">
+          <span className="absolute bottom-full left-1/2 px-2 py-1 mb-2 text-xs text-white whitespace-nowrap bg-gray-800 rounded opacity-0 transition-opacity duration-300 -translate-x-1/2 pointer-events-none group-hover:opacity-100">
                Estoy aqui para aclararte dudas ;) <br /> coming soon!
            </span>
         </button>
       </div>
 
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-screen bg-gray-900">
+      <section className="flex relative justify-center items-center h-screen bg-gray-900">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 object-cover w-full h-full"
+          className="object-cover absolute inset-0 w-full h-full"
         >
           <source src="/large.mp4" type="video/mp4" />
         </video>
@@ -113,7 +148,7 @@ function App() {
           <img
             src="/foto.jpg"
             alt="Foto de perfil"
-            className="object-cover mx-auto mb-8 border-4 border-white rounded-full shadow-lg w-80 h-80"
+            className="object-cover mx-auto mb-8 w-80 h-80 rounded-full border-4 border-white shadow-lg"
           />
           <h1 className="mb-4 text-5xl font-bold text-white">Rafael Contreras</h1>
           <p className="text-xl text-gray-300">Software Engineer | DevOps | FullStack Developer</p>
@@ -124,7 +159,7 @@ function App() {
         {/* About Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Sobre mí</h2>
-          <div className="max-w-3xl mx-auto text-lg text-gray-700">
+          <div className="mx-auto max-w-3xl text-lg text-gray-700">
             <p className="mb-4">
               Hola mundo, soy desarrollador web con sólida experiencia en el diseño, desarrollo y despliegue de aplicaciones.
               Domino stacks como LEMP, MEAN y Java SpringBoot, tengo experiencia en DevOps con Docker y GitLab CI/CD.
@@ -139,7 +174,7 @@ function App() {
         {/* Skills Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Habilidades en Stacks Tecnológicos</h2>
-          <div className="grid max-w-5xl gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 mx-auto max-w-5xl md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: 'DevOps',
@@ -172,8 +207,8 @@ function App() {
                 skills: ['Cypress', 'Postman', 'PhpUnit', 'Vegeta']
               }
             ].map((category) => (
-              <div key={category.title} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-                <div className="flex items-center gap-3 mb-4">
+              <div key={category.title} className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
+                <div className="flex gap-3 items-center mb-4">
                   <category.icon className="w-6 h-6 text-gray-900" />
                   <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
                 </div>
@@ -190,9 +225,13 @@ function App() {
         {/* Portfolio Section with Grid */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Portfolio</h2>
-          <div className="grid max-w-6xl gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 mx-auto max-w-6xl md:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item, index) => (
-              <div key={index} className="overflow-hidden transition-shadow bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+              <div
+                key={index}
+                onClick={() => setSelectedPortfolio(item)}
+                className="overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md transition-shadow cursor-pointer hover:shadow-lg"
+              >
                 <div className="bg-gray-100 aspect-video">
                   <img
                     src={item.image}
@@ -222,10 +261,11 @@ function App() {
         {/* Experience Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Experiencia Destacada</h2>
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="mx-auto space-y-8 max-w-3xl">
             {[
               {
                 title: 'Plataforma CI/CD con Docker Swarm y GitLab',
+                company: 'Ilumno',
                 items: [
                   'Implementación de CI/CD multiplataforma con GitLab Runner sin instalación local.',
                   'Automatización de despliegues en entornos dev/qa/uat.',
@@ -234,6 +274,7 @@ function App() {
               },
               {
                 title: 'Sistema de Streaming Portable con Raspberry Pi',
+                company: 'Multistream',
                 items: [
                   'Desarrollo de sistema de transmisión estable online/offline usando Raspbian y Wowza/NGINX.',
                   'Gestión de medios locales y adaptación en entornos de baja conectividad.',
@@ -242,14 +283,20 @@ function App() {
               },
               {
                 title: 'Aplicaciones Web',
+                company: 'Bwired',
                 items: [
                   'Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.',
                   'Integración de APIs REST con Supabase y Stripe.'
                 ]
               }
             ].map((exp, index) => (
-              <div key={index} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-                <h3 className="mb-4 text-xl font-semibold text-gray-900">{exp.title}</h3>
+              <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
+                  <span className="px-3 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-full">
+                    {exp.company}
+                  </span>
+                </div>
                 <ul className="space-y-2">
                   {exp.items.map((item, i) => (
                     <li key={i} className="flex items-start text-gray-600">
