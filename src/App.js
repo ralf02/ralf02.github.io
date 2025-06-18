@@ -46,37 +46,51 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-['Work_Sans']">
       {/* Floating Social Menu */}
-      <div className="fixed right-8 top-1/2 z-50 -translate-y-1/2">
-        <div className="flex flex-col gap-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex relative justify-center items-center w-12 h-12 text-white bg-gray-900 rounded-full shadow-lg transition-colors group hover:bg-gray-800"
-              aria-label={link.label}
-            >
-              <link.icon className="w-6 h-6" />
-              <span className="absolute right-full px-3 py-2 mr-3 text-sm font-medium text-white whitespace-nowrap bg-gray-900 rounded-lg border border-gray-700 shadow-lg opacity-0 transition-all duration-200 group-hover:opacity-100">
-                <span className="text-gray-400">{link.label}</span>
-                <span className="mx-1 text-gray-500">:</span>
-                <span className="text-white">{link.val}</span>
-                <span className="absolute -right-1 top-1/2 w-2 h-2 bg-gray-900 border-r border-b border-gray-700 rotate-45 -translate-y-1/2"></span>
-              </span>
-            </a>
-          ))}
-        </div>
+      <div className="hidden fixed right-8 top-1/2 z-50 flex-col gap-4 -translate-y-1/2 md:flex">
+        {socialLinks.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex relative justify-center items-center w-12 h-12 text-white bg-gray-900 rounded-full shadow-lg transition-colors group hover:bg-gray-800"
+            aria-label={link.label}
+          >
+            <link.icon className="w-6 h-6" />
+            <span className="absolute right-full px-3 py-2 mr-3 text-sm font-medium text-white whitespace-nowrap bg-gray-900 rounded-lg border border-gray-700 shadow-lg opacity-0 transition-all duration-200 group-hover:opacity-100">
+              <span className="text-gray-400">{link.label}</span>
+              <span className="mx-1 text-gray-500">:</span>
+              <span className="text-white">{link.val}</span>
+              <span className="absolute -right-1 top-1/2 w-2 h-2 bg-gray-900 border-r border-b border-gray-700 rotate-45 -translate-y-1/2"></span>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      {/* Mobile Social Menu */}
+      <div className="flex fixed right-0 bottom-0 left-0 z-50 gap-4 justify-center p-4 bg-gray-900 md:hidden">
+        {socialLinks.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center w-10 h-10 text-white bg-gray-800 rounded-full shadow-lg transition-colors hover:bg-gray-700"
+            aria-label={link.label}
+          >
+            <link.icon className="w-5 h-5" />
+          </a>
+        ))}
       </div>
 
       {/* Floating Chatbot Button */}
-      <div className="fixed right-8 bottom-8 z-50">
+      <div className="fixed right-4 bottom-4 z-50 md:right-8 md:bottom-8">
         <button
-          className="flex relative gap-2 items-center px-4 py-2 text-white bg-gray-900 rounded-full shadow-lg transition-colors group hover:bg-gray-800"
+          className="flex relative gap-2 items-center px-3 py-2 text-sm text-white bg-gray-900 rounded-full shadow-lg transition-colors md:text-base md:px-4 group hover:bg-gray-800"
           aria-label="Chatbot (Coming Soon)"
         >
-          <MessageCircle className="w-5 h-5" />
-          <span className="text-sm font-medium">Ask Rafiko</span>
+          <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
+          <span className="hidden text-sm font-medium md:inline">Ask Rafiko</span>
           <span className="absolute bottom-full left-1/2 px-2 py-1 mb-2 text-xs text-white whitespace-nowrap bg-gray-800 rounded opacity-0 transition-opacity duration-300 -translate-x-1/2 pointer-events-none group-hover:opacity-100">
                Estoy aqui para aclararte dudas ;) <br /> coming soon!
            </span>
