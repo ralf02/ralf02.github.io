@@ -396,11 +396,11 @@ function App() {
                 onClick={() => setSelectedPortfolio(item)}
                 className="overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md transition-shadow cursor-pointer hover:shadow-lg"
               >
-                <div className="bg-gray-100 aspect-video">
+                <div className="relative aspect-video">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="object-contain w-full h-full"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6">
