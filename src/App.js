@@ -137,20 +137,20 @@ function App() {
       {/* Portfolio Modal */}
       {selectedPortfolio && (
         <div className="flex fixed inset-0 z-50 justify-center items-center bg-black/50">
-          <div className="relative w-full max-w-4xl max-h-[90vh] mx-4 bg-white rounded-lg shadow-xl">
+          <div className="relative w-full max-w-2xl max-h-[90vh] mx-4 bg-white rounded-lg shadow-xl">
             {/* Modal Header */}
-            <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-xl font-semibold text-gray-900">{selectedPortfolio.title}</h3>
+            <div className="flex justify-between items-center p-3 border-b">
+              <h3 className="text-lg font-semibold text-gray-900">{selectedPortfolio.title}</h3>
               <button
                 onClick={() => setSelectedPortfolio(null)}
                 className="p-1 text-gray-500 rounded-full transition-colors hover:bg-gray-100"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Modal Content */}
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-8rem)]">
+            <div className="p-3 overflow-y-auto max-h-[calc(90vh-8rem)]">
               <div className="relative">
                 {/* Carousel */}
                 <div className="overflow-hidden relative rounded-lg">
@@ -163,26 +163,26 @@ function App() {
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="flex absolute inset-0 justify-between items-center p-4">
+                      <div className="flex absolute inset-0 justify-between items-center p-2">
                         <button
                           onClick={prevSlide}
-                          className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+                          className="p-1.5 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
                         >
-                          <ChevronLeft className="w-6 h-6" />
+                          <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
                           onClick={nextSlide}
-                          className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+                          className="p-1.5 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
                         >
-                          <ChevronRight className="w-6 h-6" />
+                          <ChevronRight className="w-5 h-5" />
                         </button>
                       </div>
-                      <div className="flex absolute right-0 left-0 bottom-4 gap-2 justify-center">
+                      <div className="flex absolute right-0 left-0 bottom-2 gap-1.5 justify-center">
                         {portfolioDetails[selectedPortfolio.title].map((_, index) => (
                           <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
-                            className={`w-2 h-2 rounded-full transition-colors ${
+                            className={`w-1.5 h-1.5 rounded-full transition-colors ${
                               currentSlide === index ? 'bg-white' : 'bg-white/50'
                             }`}
                           />
@@ -194,20 +194,20 @@ function App() {
 
                 {/* Content */}
                 {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
-                  <div className="mt-6">
+                  <div className="mt-3">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="mb-2 text-2xl font-semibold text-gray-900">
+                        <h4 className="mb-1.5 text-lg font-semibold text-gray-900">
                           {portfolioDetails[selectedPortfolio.title][currentSlide].title}
                         </h4>
-                        <p className="mb-4 text-gray-600">
+                        <p className="mb-2 text-sm text-gray-600">
                           {portfolioDetails[selectedPortfolio.title][currentSlide].description}
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {portfolioDetails[selectedPortfolio.title][currentSlide].tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-3 py-1 text-sm text-gray-700 bg-gray-100 rounded-full"
+                              className="px-2 py-0.5 text-xs text-gray-700 bg-gray-100 rounded-full"
                             >
                               {tag}
                             </span>
@@ -219,13 +219,13 @@ function App() {
                           href={portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg transition-colors hover:bg-gray-200"
+                          className="inline-flex items-center px-2.5 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg transition-colors hover:bg-gray-200"
                         >
                           <Globe className="mr-1.5 w-4 h-4" />
                           Demo
                         </a>
                       ) : (
-                        <span className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-500 bg-gray-50 rounded-lg transition-colors">
+                        <span className="inline-flex items-center px-2.5 py-1 text-sm font-medium text-gray-500 bg-gray-50 rounded-lg transition-colors">
                           <Lock className="mr-1.5 w-4 h-4" />
                           Private
                         </span>
@@ -237,7 +237,7 @@ function App() {
             </div>
 
             {/* Modal Footer */}
-            <div className="flex gap-4 justify-center p-4 border-t">
+            <div className="flex justify-center p-2 border-t">
               <span className="text-sm font-medium text-gray-600">- "Moliendo Café" ☕ -</span>
             </div>
           </div>
@@ -400,7 +400,7 @@ function App() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
                 </div>
                 <div className="p-6">
