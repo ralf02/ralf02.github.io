@@ -81,9 +81,9 @@ function App() {
       {
         title: 'Local Tradeshow Server',
         description: 'Muestra de la implementacion de una versión local y offline de un sitio web Drupal, destinado a funcionar sin conexión en ferias comerciales.',
-        image: '/portfolio/web.jpg',
+        image: '/portfolio/loc.jpg',
         demoUrl: 'https://github.com/ralf02/local-tradeshow-server',
-        tags: ['Drupal', 'PHP', 'MySQL', 'shell', 'aws']
+        tags: ['Drupal', 'PHP', 'MySQL', 'Shell', 'aws']
       },
       {
         title: 'Plataforma de Video en Línea',
