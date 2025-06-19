@@ -11,12 +11,18 @@ import {
   Database,
   Video,
   TestTube2,
-  X
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Lock,
+  ExternalLink,
+  Globe
 } from 'lucide-react';
 import { useState } from 'react';
 
 function App() {
   const [selectedPortfolio, setSelectedPortfolio] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/ralf02', label: 'GitHub', val: 'ralf02' },
@@ -47,6 +53,85 @@ function App() {
 
   ];
 
+  const portfolioDetails = {
+    'DevOps': [
+      {
+        title: 'Infraestructura On-Premise',
+        description: 'Gestión de la infraestructura interna de la compañía en Docker Swarm con enfoque en alta disponibilidad para el despliegue de servicios con Gitlab CI/CD automatizando  con herramientas como Ansible y Shell Scripting.',
+        image: '/portfolio/swarm.jpg',
+        demoUrl: '',
+        tags: ['Docker Swarm', 'GitLab CI/CD', 'Shell Scripting']
+      },
+      {
+        title: 'Despliegue FullStack',
+        description: 'Demostracion del flujo DevOps en GitLab para un aplicativo en desarrollo.',
+        image: '/portfolio/ci-cd.jpg',
+        demoUrl: 'https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799',
+        tags: ['GitLab CI/CD', 'AWS', 'Laravel', 'PHP', 'Node.js', 'Next.js']
+      },
+    ],
+    'Desarrollo Web': [
+      {
+        title: 'E-commerce Platform',
+        description: 'Desarrollo e intervencion de plataforma de comercio electrónico con Next.js y Stripe.',
+        image: '/portfolio/oils.png',
+        demoUrl: '',
+        tags: ['Next.js', 'Stripe', 'React']
+      },
+      {
+        title: 'Local Tradeshow Server',
+        description: 'Muestra de la implementacion de una versión local y offline de un sitio web Drupal, destinado a funcionar sin conexión en ferias comerciales.',
+        image: '/portfolio/web.jpg',
+        demoUrl: 'https://github.com/ralf02/local-tradeshow-server',
+        tags: ['Drupal', 'PHP', 'MySQL', 'shell', 'aws']
+      },
+      {
+        title: 'Plataforma de Video en Línea',
+        description: 'Desarrollo de APIs RESTful, Interfaz para la gestión de estadísticas y archivos multimedia para streaming.',
+        image: '/portfolio/pvl.png',
+        demoUrl: '',
+        tags: ['ElasticSearch', 'Express', 'Laravel', 'PHP', 'MySQL', 'ReactJs','Bash','Docker']
+      }
+    ],
+    'Laboratorios': [
+      {
+        title: 'Kubernetes Cluster',
+        description: 'Configuración de cluster Kubernetes para desarrollo y producción.',
+        image: '/portfolio/kub.jpg',
+        demoUrl: 'https://github.com/ralf02/k8s-ansible-aws',
+        tags: ['Kubernetes', 'Ansible', 'AWS', 'Shell Scripting']
+      },
+      {
+        title: 'Agentes IA',
+        description: 'Experimentos con modelos de IA generativa y Agentes IA para automatización.',
+        image: '/portfolio/agentes.jpg',
+        demoUrl: '',
+        tags: ['Python', 'Node.js', 'OpenAI']
+      },
+      {
+        title: 'Aplicaciones Móviles',
+        description: 'Fase experimental con ReactNative y Node.js.',
+        image: '/portfolio/mobile.jpg',
+        demoUrl: '',
+        tags: ['ReactNative', 'Node.js', 'Android', 'IOs']
+      }
+    ]
+  };
+
+  const nextSlide = () => {
+    if (selectedPortfolio) {
+      const items = portfolioDetails[selectedPortfolio.title];
+      setCurrentSlide((prev) => (prev + 1) % items.length);
+    }
+  };
+
+  const prevSlide = () => {
+    if (selectedPortfolio) {
+      const items = portfolioDetails[selectedPortfolio.title];
+      setCurrentSlide((prev) => (prev - 1 + items.length) % items.length);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-['Work_Sans']">
       {/* Portfolio Modal */}
@@ -66,9 +151,88 @@ function App() {
 
             {/* Modal Content */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-8rem)]">
-              <div className="flex flex-col justify-center items-center py-12 text-center">
-                <h4 className="mb-4 text-2xl font-semibold text-gray-900">Coming Soon</h4>
-                <p className="text-gray-600">Estamos trabajando en el contenido detallado de este proyecto.</p>
+              <div className="relative">
+                {/* Carousel */}
+                <div className="overflow-hidden relative rounded-lg">
+                  {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
+                    <>
+                      <div className="relative aspect-video">
+                        <img
+                          src={portfolioDetails[selectedPortfolio.title][currentSlide].image}
+                          alt={portfolioDetails[selectedPortfolio.title][currentSlide].title}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                      <div className="flex absolute inset-0 justify-between items-center p-4">
+                        <button
+                          onClick={prevSlide}
+                          className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+                        >
+                          <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button
+                          onClick={nextSlide}
+                          className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+                        >
+                          <ChevronRight className="w-6 h-6" />
+                        </button>
+                      </div>
+                      <div className="flex absolute right-0 left-0 bottom-4 gap-2 justify-center">
+                        {portfolioDetails[selectedPortfolio.title].map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              currentSlide === index ? 'bg-white' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                {/* Content */}
+                {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
+                  <div className="mt-6">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="mb-2 text-2xl font-semibold text-gray-900">
+                          {portfolioDetails[selectedPortfolio.title][currentSlide].title}
+                        </h4>
+                        <p className="mb-4 text-gray-600">
+                          {portfolioDetails[selectedPortfolio.title][currentSlide].description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {portfolioDetails[selectedPortfolio.title][currentSlide].tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 text-sm text-gray-700 bg-gray-100 rounded-full"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl ? (
+                        <a
+                          href={portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg transition-colors hover:bg-gray-200"
+                        >
+                          <Globe className="mr-1.5 w-4 h-4" />
+                          Demo
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-500 bg-gray-50 rounded-lg transition-colors">
+                          <Lock className="mr-1.5 w-4 h-4" />
+                          Private
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -173,7 +337,7 @@ function App() {
 
         {/* Skills Section */}
         <section className="mb-20">
-          <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Habilidades en Stacks Tecnológicos</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Skills Tecnológicos</h2>
           <div className="grid gap-8 mx-auto max-w-5xl md:grid-cols-2 lg:grid-cols-3">
             {[
               {
@@ -224,7 +388,7 @@ function App() {
 
         {/* Portfolio Section with Grid */}
         <section className="mb-20">
-          <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Portfolio</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Portafolio</h2>
           <div className="grid gap-8 mx-auto max-w-6xl md:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item, index) => (
               <div
@@ -273,20 +437,21 @@ function App() {
                 ]
               },
               {
+                title: 'Aplicaciones Web',
+                company: 'Bwired',
+                items: [
+                  'Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.',
+                  'Integración de APIs REST con Supabase y Stripe.'
+                ]
+              }
+              ,
+              {
                 title: 'Sistema de Streaming Portable con Raspberry Pi',
                 company: 'Multistream',
                 items: [
                   'Desarrollo de sistema de transmisión estable online/offline usando Raspbian y Wowza/NGINX.',
                   'Gestión de medios locales y adaptación en entornos de baja conectividad.',
                   'Interfaz personalizada para usuarios móviles y de escritorio.'
-                ]
-              },
-              {
-                title: 'Aplicaciones Web',
-                company: 'Bwired',
-                items: [
-                  'Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.',
-                  'Integración de APIs REST con Supabase y Stripe.'
                 ]
               }
             ].map((exp, index) => (

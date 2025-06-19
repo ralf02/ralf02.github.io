@@ -11,7 +11,7 @@ services:
       - /app/node_modules
     command: sh -c "yarn install && yarn start"
     ports:
-      - '3000:3000'
+      - '3100:3000'
     networks:
       - app-network
 
