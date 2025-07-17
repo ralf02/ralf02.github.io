@@ -30,34 +30,97 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 - Integración de pagos seguros y gestión de inventario
 - Optimización de rendimiento y experiencia de usuario
 
-### **Local Tradeshow Server**
-- Implementación de Drupal para ferias comerciales offline
-- Sistema de gestión de contenido local
-- Optimización para funcionamiento sin conexión
-- Repositorio: [https://github.com/ralf02/local-tradeshow-server](https://github.com/ralf02/local-tradeshow-server)
+## Experiencia
 
-### **Plataforma de Video en Línea**
-- Desarrollo de APIs RESTful para streaming
-- Interfaz de gestión de estadísticas y multimedia
-- Integración con ElasticSearch y Laravel
-- Sistema de streaming con Express y React
+## Portfolio
 
-### **Kubernetes Cluster**
-- Configuración y gestión de cluster Kubernetes
-- Automatización de despliegues con GitLab CI/CD
+### Desarrollo Web
+- Desarrollo full-stack con LEMP, MERN y Spring Boot
+- Creación de APIs REST
+- Personalización de CMS (Drupal, WordPress)
+- Construcción de interfaces escalables y funcionales
+- Desarrollo de aplicaciones con PHP, Node.js, Next.js, Nginx, HTML y frameworks Java
+- Implementación de soluciones con Raspberry Pi y streaming
+
+#### Proyectos Destacados
+- **E-commerce Platform**: Desarrollo e intervención de plataforma de comercio electrónico con Next.js y Stripe
+  - Tecnologías: Next.js, Stripe, React
+  - Enfoque en integración de pagos y gestión de inventario
+
+- **Local Tradeshow Server**: Implementación de versión local/offline de un sitio web Drupal para ferias comerciales
+  - Tecnologías: Drupal, PHP, MySQL, Shell, AWS
+  - Repositorio: [https://github.com/ralf02/local-tradeshow-server](https://github.com/ralf02/local-tradeshow-server)
+  - Sistema de gestión de contenido local optimizado para funcionamiento sin conexión
+
+- **Plataforma de Video en Línea**: Desarrollo de APIs RESTful y sistema de streaming
+  - Tecnologías: Elasticsearch, Express, Laravel, PHP, MySQL, ReactJs, Bash, Docker
+  - Interfaz para gestión de estadísticas y archivos multimedia
+  - Sistema completo de streaming con Laravel y React
+
+### DevOps
+- Configuración de cluster Kubernetes para desarrollo y producción
+- Automatización de flujos CI/CD con GitLab
+- Configuración de runners con Shell Scripting
+- Despliegue de entornos con Ansible y Docker Swarm
 - Optimización de recursos y escalabilidad
+- Gestión de infraestructura en la nube con AWS
 
-### **Infraestructura On-Premise**
-- Gestión de infraestructura Docker Swarm
-- Automatización con Ansible y Shell Scripting
-- Implementación de CI/CD con GitLab
-- Enfoque en alta disponibilidad
+#### Proyectos Destacados
+- **Infraestructura On-Premise**: Gestión de la infraestructura interna de la compañía
+  - Tecnologías: Docker Swarm, GitLab CI/CD, Shell Scripting
+  - Enfoque en alta disponibilidad y automatización con Ansible
+  - Despliegue de servicios con GitLab CI/CD
 
-### **Laboratorio de Innovación**
-- Desarrollo de soluciones en AWS y Kubernetes
+- **Despliegue FullStack**: Demostración del flujo DevOps en GitLab
+  - Tecnologías: GitLab CI/CD, AWS, Laravel, PHP, Node.js, Next.js
+  - Pipeline demo: [https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799](https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799)
+  - Integración completa de Lumen con Next.js
+
+### Laboratorio de Innovación
+- Desarrollo Experimentación de soluciones en AWS con Asible, Terraform y Kubernetes
 - Experimentación con React Native
-- Implementación de agentes inteligentes
-- Enfoque en eficiencia y mejora continua
+- Implementación de agentes inteligentes basados en IA generativa
+- Enfoque en eficiencia, innovación y mejora continua
+
+#### Proyectos Destacados
+- **Kubernetes Cluster**: Configuración y gestión de clusters Kubernetes
+  - Tecnologías: Kubernetes, Ansible, AWS, Shell Scripting
+  - Repositorio: [https://github.com/ralf02/k8s-ansible-aws](https://github.com/ralf02/k8s-ansible-aws)
+  - Configuración para desarrollo y producción
+
+- **Agentes IA**: Experimentos con modelos de IA generativa y Agentes IA para automatización
+  - Tecnologías: Python, Node.js, OpenAI
+  - Desarrollo de agentes inteligentes para automatización
+  - Integración con diferentes APIs de IA
+  - Widget de chat implementado en el sitio web para interacción con el agente
+  - Repositorio: [https://github.com/ralf02/my.agent.widget](https://github.com/ralf02/my.agent.widget)
+
+- **Aplicaciones Móviles**: Fase experimental con ReactNative
+  - Tecnologías: ReactNative, Node.js, Android, iOS
+  - Desarrollo de interfaces nativas
+  - Integración con servicios backend
+
+---
+
+## Tecnologías
+
+### Desarrollo Web
+- Frontend: React, Next.js, HTML, CSS, JavaScript
+- Backend: PHP (Laravel), Node.js, Java
+- CMS: Drupal, WordPress
+- Bases de datos: MySQL, Elasticsearch
+
+### DevOps
+- Orquestación: Kubernetes, Docker Swarm
+- CI/CD: GitLab CI/CD
+- Automatización: Ansible, Shell Scripting
+- Cloud: AWS
+
+### Laboratorio
+- Desarrollo móvil: React Native
+- Cloud: AWS, Terraform
+- Streaming: Nginx, Raspberry Pi
+- IA: Agentes inteligentes basados en IA generativa
 
 ---
 
@@ -67,6 +130,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 - **GitHub**: [https://github.com/ralf02](https://github.com/ralf02)
 - **GitLab**: [https://gitlab.com/ralf02](https://gitlab.com/ralf02)
 - **LinkedIn**: [https://linkedin.com/in/rafiko](https://linkedin.com/in/rafiko)
+- **Website**: [https://ralf02.github.io](https://ralf02.github.io)
 
 ---
 

@@ -103,9 +103,9 @@ function App() {
       },
       {
         title: 'Agentes IA',
-        description: 'Experimentos con modelos de IA generativa y Agentes IA para automatización.',
+        description: 'Experimentos con modelos de IA generativa y Agentes IA para automatización. en mi sitio web puedes interactar por chat con el agente IA que creé',
         image: '/portfolio/agentes.jpg',
-        demoUrl: '',
+        demoUrl: 'https://github.com/ralf02/my.agent.widget',
         tags: ['Python', 'Node.js', 'OpenAI']
       },
       {
