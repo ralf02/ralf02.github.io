@@ -61,7 +61,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 - Configuración de cluster Kubernetes para desarrollo y producción
 - Automatización de flujos CI/CD con GitLab
 - Configuración de runners con Shell Scripting
-- Despliegue de entornos con Ansible y Docker Swarm
+- Despliegue de entornos con Terraform, Ansible y Docker Swarm
 - Optimización de recursos y escalabilidad
 - Gestión de infraestructura en la nube con AWS
 
@@ -74,7 +74,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 - **Despliegue FullStack**: Demostración del flujo DevOps en GitLab
   - Tecnologías: GitLab CI/CD, AWS, Laravel, PHP, Node.js, Next.js
   - Pipeline demo: [https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799](https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799)
-  - Integración completa de Lumen con Next.js
+  - Integración completa de Lumen y Next.js para un e-comerce
 
 ### Laboratorio de Innovación
 - Desarrollo Experimentación de soluciones en AWS con Asible, Terraform y Kubernetes
@@ -134,4 +134,4 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ---
 
-*Disponible para proyectos freelance, consultoría o contratación remota.*
+*Disponible para proyectos freelance, consultoría o contratación remota full time.*
