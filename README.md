@@ -23,29 +23,50 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ---
 
-## Experiencia Destacada
+## Proyectos Destacados
 
-### **Plataforma CI/CD con Docker Swarm y GitLab**
-- Implementación de CI/CD multiplataforma con GitLab Runner sin instalación local.
-- Automatización de despliegues en entornos dev/qa/uat.
-- Estrategia de tags, cleanup policies y rollback seguro.
+### **E-commerce Platform**
+- Desarrollo de plataforma de comercio electrónico con Next.js y Stripe
+- Integración de pagos seguros y gestión de inventario
+- Optimización de rendimiento y experiencia de usuario
 
-### **Sistema de Streaming Portable con Raspberry Pi**
-- Desarrollo de sistema de transmisión estable online/offline usando Raspbian y Wowza/NGINX.
-- Gestión de medios locales y adaptación en entornos de baja conectividad.
-- Interfaz personalizada para usuarios móviles y de escritorio.
+### **Local Tradeshow Server**
+- Implementación de Drupal para ferias comerciales offline
+- Sistema de gestión de contenido local
+- Optimización para funcionamiento sin conexión
+- Repositorio: [https://github.com/ralf02/local-tradeshow-server](https://github.com/ralf02/local-tradeshow-server)
 
-### **Aplicaciones Web**
-- Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.
-- Integración de APIs REST con Supabase y Stripe.
+### **Plataforma de Video en Línea**
+- Desarrollo de APIs RESTful para streaming
+- Interfaz de gestión de estadísticas y multimedia
+- Integración con ElasticSearch y Laravel
+- Sistema de streaming con Express y React
+
+### **Kubernetes Cluster**
+- Configuración y gestión de cluster Kubernetes
+- Automatización de despliegues con GitLab CI/CD
+- Optimización de recursos y escalabilidad
+
+### **Infraestructura On-Premise**
+- Gestión de infraestructura Docker Swarm
+- Automatización con Ansible y Shell Scripting
+- Implementación de CI/CD con GitLab
+- Enfoque en alta disponibilidad
+
+### **Laboratorio de Innovación**
+- Desarrollo de soluciones en AWS y Kubernetes
+- Experimentación con React Native
+- Implementación de agentes inteligentes
+- Enfoque en eficiencia y mejora continua
 
 ---
 
 ## Contacto
 
-- **Email**: rafael.contreras@mail.faba.edu.co
+- **Email**: ralfcontreras@gmail.com
 - **GitHub**: [https://github.com/ralf02](https://github.com/ralf02)
-- **LinkedIn**: [linkedin.com/in/rafiko](https://linkedin.com/in/rafiko)
+- **GitLab**: [https://gitlab.com/ralf02](https://gitlab.com/ralf02)
+- **LinkedIn**: [https://linkedin.com/in/rafiko](https://linkedin.com/in/rafiko)
 
 ---
 
