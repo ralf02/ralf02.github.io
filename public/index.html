@@ -39,5 +39,24 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+     <!-- Widget Chat Rafiko -->
+     <!-- 1. Incluir el CSS -->
+     <link rel="stylesheet" href="https://my-agent-widget.vercel.app/static/css/main.css">
+
+     <!-- 2. Incluir el JavaScript -->
+     <script src="https://my-agent-widget.vercel.app/static/js/main.js"></script>
+
+     <!-- 3. Insertar el widget -->
+     <div id="chat-widget"></div>
+
+     <!-- 4. Inicializar el widget -->
+     <script>
+       window.onload = function() {
+         new ChatbotWidget(document.getElementById('chat-widget'), {
+           widgetTitle: "Rafiko responde"
+         });
+       };
+     </script>
   </body>
 </html>

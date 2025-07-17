@@ -282,20 +282,6 @@ function App() {
         ))}
       </div>
 
-      {/* Floating Chatbot Button */}
-      <div className="fixed right-4 bottom-4 z-50 md:right-8 md:bottom-8">
-        <button
-          className="flex relative gap-2 items-center px-3 py-2 text-sm text-white bg-gray-900 rounded-full shadow-lg transition-colors md:text-base md:px-4 group hover:bg-gray-800"
-          aria-label="Chatbot (Coming Soon)"
-        >
-          <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
-          <span className="hidden text-sm font-medium md:inline">Ask Rafiko</span>
-          <span className="absolute bottom-full left-1/2 px-2 py-1 mb-2 text-xs text-white whitespace-nowrap bg-gray-800 rounded opacity-0 transition-opacity duration-300 -translate-x-1/2 pointer-events-none group-hover:opacity-100">
-               Estoy aqui para aclararte dudas ;) <br /> coming soon!
-           </span>
-        </button>
-      </div>
-
       {/* Hero Section */}
       <section className="flex relative justify-center items-center h-screen bg-gray-900">
         <video
