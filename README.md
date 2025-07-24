@@ -13,92 +13,71 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ## Habilidades en Stacks Tecnológicos
 
-- **Frontend**: React, Next.js, TailwindCSS, shadcn/ui,Angular
+- **Frontend**: React, Next.js, TailwindCSS, shadcn/ui, Angular
 - **Backend**: NestJS, Node.js, Express, Laravel, PHP, Java SpringBoot
 - **DevOps**: Docker, Docker Swarm, K8s, GitLab CI/CD, Vault, NGINX, Linux (Debian, CentOS)
 - **Bases de Datos**: PostgreSQL, MariaDB, MongoDB, Supabase, ElasticSearch
 - **Streaming**: Wowza Streaming Engine, Video.js, FFmpeg
 - **Testing y QA**: Cypress, Postman, PhpUnit, Vegeta
-- **Herramientas extra**:Git, GitLab, Terraform, Ansible
+- **Herramientas extra**: Git, GitLab, Terraform, Ansible
 
 ---
 
-## Proyectos Destacados
-
-### **E-commerce Platform**
-- Desarrollo de plataforma de comercio electrónico con Next.js y Stripe
-- Integración de pagos seguros y gestión de inventario
-- Optimización de rendimiento y experiencia de usuario
-
-## Experiencia
-
-## Portfolio
-
-### Desarrollo Web
-- Desarrollo full-stack con LEMP, MERN y Spring Boot
-- Creación de APIs REST
-- Personalización de CMS (Drupal, WordPress)
-- Construcción de interfaces escalables y funcionales
-- Desarrollo de aplicaciones con PHP, Node.js, Next.js, Nginx, HTML y frameworks Java
-- Implementación de soluciones con Raspberry Pi y streaming
-
-#### Proyectos Destacados
-- **E-commerce Platform**: Desarrollo e intervención de plataforma de comercio electrónico con Next.js y Stripe
-  - Tecnologías: Next.js, Stripe, React
-  - Enfoque en integración de pagos y gestión de inventario
-
-- **Local Tradeshow Server**: Implementación de versión local/offline de un sitio web Drupal para ferias comerciales
-  - Tecnologías: Drupal, PHP, MySQL, Shell, AWS
-  - Repositorio: [https://github.com/ralf02/local-tradeshow-server](https://github.com/ralf02/local-tradeshow-server)
-  - Sistema de gestión de contenido local optimizado para funcionamiento sin conexión
-
-- **Plataforma de Video en Línea**: Desarrollo de APIs RESTful y sistema de streaming
-  - Tecnologías: Elasticsearch, Express, Laravel, PHP, MySQL, ReactJs, Bash, Docker
-  - Interfaz para gestión de estadísticas y archivos multimedia
-  - Sistema completo de streaming con Laravel y React
+## Portafolio
 
 ### DevOps
-- Configuración de cluster Kubernetes para desarrollo y producción
-- Automatización de flujos CI/CD con GitLab
-- Configuración de runners con Shell Scripting
-- Despliegue de entornos con Terraform, Ansible y Docker Swarm
-- Optimización de recursos y escalabilidad
-- Gestión de infraestructura en la nube con AWS
+
+Automatización de flujos CI/CD con GitLab, configuración de runners con Shell Scripting y despliegue de entornos con Ansible y Docker Swarm.
 
 #### Proyectos Destacados
-- **Infraestructura On-Premise**: Gestión de la infraestructura interna de la compañía
+- **Infraestructura On-Premise**
+  - Gestión de la infraestructura interna de la compañía en Docker Swarm con enfoque en alta disponibilidad para el despliegue de servicios con Gitlab CI/CD automatizando con herramientas como Ansible y Shell Scripting.
   - Tecnologías: Docker Swarm, GitLab CI/CD, Shell Scripting
-  - Enfoque en alta disponibilidad y automatización con Ansible
-  - Despliegue de servicios con GitLab CI/CD
-
-- **Despliegue FullStack**: Demostración del flujo DevOps en GitLab
+- **Despliegue FullStack**
+  - Demostración del flujo DevOps en GitLab para un aplicativo en desarrollo.
   - Tecnologías: GitLab CI/CD, AWS, Laravel, PHP, Node.js, Next.js
   - Pipeline demo: [https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799](https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799)
-  - Integración completa de Lumen y Next.js para un e-comerce
 
-### Laboratorio de Innovación
-- Desarrollo Experimentación de soluciones en AWS con Asible, Terraform y Kubernetes
-- Experimentación con React Native
-- Implementación de agentes inteligentes basados en IA generativa
-- Enfoque en eficiencia, innovación y mejora continua
+### Desarrollo Web
+
+Desarrollo full-stack con LEMP, MERN y Spring Boot, creando APIs REST, personalizando CMS (Drupal, WordPress), construyendo interfaces escalables y funcionales.
 
 #### Proyectos Destacados
-- **Kubernetes Cluster**: Configuración y gestión de clusters Kubernetes
+- **E-commerce Platform**
+  - Desarrollo e intervención de plataforma de comercio electrónico con Next.js y Stripe.
+  - Tecnologías: Next.js, Stripe, React
+- **Local Tradeshow Server**
+  - Muestra de la implementación de una versión local y offline de un sitio web Drupal, destinado a funcionar sin conexión en ferias comerciales.
+  - Tecnologías: Drupal, PHP, MySQL, Shell, AWS
+  - Repositorio: [https://github.com/ralf02/local-tradeshow-server](https://github.com/ralf02/local-tradeshow-server)
+- **Plataforma de Video en Línea**
+  - Desarrollo de APIs RESTful, Interfaz para la gestión de estadísticas y archivos multimedia para streaming.
+  - Tecnologías: ElasticSearch, Express, Laravel, PHP, MySQL, ReactJs, Bash, Docker
+- **Prototipo reserva en restaurantes**
+  - Desarrollo de APIs RESTful con Flask, Interfaz para la gestión de reservas con Next.js.
+  - Tecnologías: Flask, Next.js, Python, PostgreSQL, ReactJs, GitLab CI/CD, Docker
+  - Repositorio: [https://gitlab.com/ralf02/restaurant-flask-nextjs](https://gitlab.com/ralf02/restaurant-flask-nextjs)
+
+### Laboratorios
+
+Exploro soluciones en la nube con AWS, Kubernetes y Terraform. Profundizo en el desarrollo de aplicaciones móviles con React Native y en la creación de agentes inteligentes basados en IA generativa, integrando workflows con scripts en Python y APIs con Flask/FastAPI. Me enfoco en la eficiencia, la innovación y la mejora continua.
+
+#### Proyectos Destacados
+- **Kubernetes Cluster**
+  - Configuración de cluster Kubernetes para desarrollo y producción.
   - Tecnologías: Kubernetes, Ansible, AWS, Shell Scripting
   - Repositorio: [https://github.com/ralf02/k8s-ansible-aws](https://github.com/ralf02/k8s-ansible-aws)
-  - Configuración para desarrollo y producción
-
-- **Agentes IA**: Experimentos con modelos de IA generativa y Agentes IA para automatización
-  - Tecnologías: Python, Node.js, OpenAI
-  - Desarrollo de agentes inteligentes para automatización
-  - Integración con diferentes APIs de IA
-  - Widget de chat implementado en el sitio web para interacción con el agente
+- **Agentes IA**
+  - Experimentos con modelos de IA generativa y Agentes IA para automatización. En mi sitio web puedes interactuar por chat con el agente IA que creé.
+  - Tecnologías: Python, Node.js, OpenAI, FastAPI
   - Repositorio: [https://github.com/ralf02/my.agent.widget](https://github.com/ralf02/my.agent.widget)
-
-- **Aplicaciones Móviles**: Fase experimental con ReactNative
-  - Tecnologías: ReactNative, Node.js, Android, iOS
-  - Desarrollo de interfaces nativas
-  - Integración con servicios backend
+- **Aplicaciones Móviles**
+  - Fase experimental con ReactNative y Node.js.
+  - Tecnologías: ReactNative, Node.js, Android, IOs
+- **Aplicaciones Web**
+  - Fase experimental con Flask y Next.js.
+  - Tecnologías: Flask, Next.js, Python, PostgreSQL, GitLab CI/CD, Docker
+  - Repositorio: [https://gitlab.com/ralf02/restaurant-flask-nextjs](https://gitlab.com/ralf02/restaurant-flask-nextjs)
 
 ---
 

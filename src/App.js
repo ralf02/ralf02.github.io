@@ -4,7 +4,6 @@ import {
   Linkedin,
   Gitlab,
   Mail,
-  MessageCircle,
   Server,
   Code2,
   Layout,
@@ -15,7 +14,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Lock,
-  ExternalLink,
   Globe
 } from 'lucide-react';
 import { useState } from 'react';
@@ -42,13 +40,13 @@ function App() {
       title: 'Desarrollo Web',
       description: 'Desarrollo full-stack con LEMP, MERN y Spring Boot, creando APIs REST, personalizando CMS (Drupal, WordPress), construyendo interfaces escalables y funcionales.',
       image: '/portfolio/web.jpg',
-      tags: ['PHP', 'Node.js','Next.js', 'Nginx', 'Html', 'Raspberry Pi', 'Streaming', 'Laravel', 'Drupal','Java']
+      tags: ['PHP', 'Node.js','Next.js', 'Nginx', 'Html', 'Raspberry Pi', 'Streaming', 'Laravel', 'Drupal','Java','Python', 'Flask', 'FastAPI']
     },
     {
       title: 'Laboratorios',
-      description: 'Exploro soluciones en la nube con AWS, Kubernetes y Terraform, mientras aprendo sobre desarrollo de aplicaciones móviles con React Native. Experimento con agentes inteligentes basados en IA generativa, con enfoque en eficiencia, innovación y mejora continua.',
+      description: 'Exploro soluciones en la nube con AWS, Kubernetes y Terraform. Profundizo en el desarrollo de aplicaciones móviles con React Native y en la creación de agentes inteligentes basados en IA generativa, integrando worflows con scripts en Python y Apis con Flask/FastAPI. Me enfoco en la eficiencia, la innovación y la mejora continua.',
       image: '/portfolio/labs.jpg',
-      tags: ['K8s', 'aws','Raspberry Pi', 'Streaming', 'Nginx', 'ReactNative']
+      tags: ['K8s', 'aws','Raspberry Pi', 'Python', 'Streaming', 'Nginx', 'ReactNative']
     },
 
   ];
@@ -59,14 +57,14 @@ function App() {
         title: 'Infraestructura On-Premise',
         description: 'Gestión de la infraestructura interna de la compañía en Docker Swarm con enfoque en alta disponibilidad para el despliegue de servicios con Gitlab CI/CD automatizando  con herramientas como Ansible y Shell Scripting.',
         image: '/portfolio/swarm.jpg',
-        demoUrl: '',
+        demoUrl: [],
         tags: ['Docker Swarm', 'GitLab CI/CD', 'Shell Scripting']
       },
       {
         title: 'Despliegue FullStack',
         description: 'Demostracion del flujo DevOps en GitLab para un aplicativo en desarrollo.',
         image: '/portfolio/ci-cd.jpg',
-        demoUrl: 'https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799',
+        demoUrl: ['https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799'],
         tags: ['GitLab CI/CD', 'AWS', 'Laravel', 'PHP', 'Node.js', 'Next.js']
       },
     ],
@@ -75,22 +73,29 @@ function App() {
         title: 'E-commerce Platform',
         description: 'Desarrollo e intervencion de plataforma de comercio electrónico con Next.js y Stripe.',
         image: '/portfolio/oils.png',
-        demoUrl: '',
+        demoUrl: [],
         tags: ['Next.js', 'Stripe', 'React']
       },
       {
         title: 'Local Tradeshow Server',
         description: 'Muestra de la implementacion de una versión local y offline de un sitio web Drupal, destinado a funcionar sin conexión en ferias comerciales.',
         image: '/portfolio/loc.jpg',
-        demoUrl: 'https://github.com/ralf02/local-tradeshow-server',
+        demoUrl: ['https://github.com/ralf02/local-tradeshow-server'],
         tags: ['Drupal', 'PHP', 'MySQL', 'Shell', 'aws']
       },
       {
         title: 'Plataforma de Video en Línea',
         description: 'Desarrollo de APIs RESTful, Interfaz para la gestión de estadísticas y archivos multimedia para streaming.',
         image: '/portfolio/pvl.png',
-        demoUrl: '',
+        demoUrl: [],
         tags: ['ElasticSearch', 'Express', 'Laravel', 'PHP', 'MySQL', 'ReactJs','Bash','Docker']
+      },
+      {
+        title: 'Prototipo reserva en restaurantes',
+        description: 'Desarrollo de APIs RESTful con Flask, Interfaz para la gestión de resservas con Next.js.',
+        image: '/portfolio/flask.png',
+        demoUrl: ['https://gitlab.com/ralf02/restaurant-flask-nextjs'],
+        tags: ['Flask', 'Next.js', 'Python', 'PostgreSQL', 'ReactJs','GitLab CI/CD','Docker']
       }
     ],
     'Laboratorios': [
@@ -98,22 +103,29 @@ function App() {
         title: 'Kubernetes Cluster',
         description: 'Configuración de cluster Kubernetes para desarrollo y producción.',
         image: '/portfolio/kub.jpg',
-        demoUrl: 'https://github.com/ralf02/k8s-ansible-aws',
+        demoUrl: ['https://github.com/ralf02/k8s-ansible-aws'],
         tags: ['Kubernetes', 'Ansible', 'AWS', 'Shell Scripting']
       },
       {
         title: 'Agentes IA',
         description: 'Experimentos con modelos de IA generativa y Agentes IA para automatización. en mi sitio web puedes interactar por chat con el agente IA que creé',
         image: '/portfolio/agentes.jpg',
-        demoUrl: 'https://github.com/ralf02/my.agent.widget',
-        tags: ['Python', 'Node.js', 'OpenAI']
+        demoUrl: ['https://github.com/ralf02/my.agent.widget', 'https://github.com/ralf02/forta.agent'],
+        tags: ['Python', 'Node.js', 'OpenAI', 'FastAPI']
       },
       {
         title: 'Aplicaciones Móviles',
         description: 'Fase experimental con ReactNative y Node.js.',
         image: '/portfolio/mobile.jpg',
-        demoUrl: '',
+        demoUrl: [],
         tags: ['ReactNative', 'Node.js', 'Android', 'IOs']
+      },
+      {
+        title: 'Aplicaciones Web',
+        description: 'Fase experimental con Flask y Next.js.',
+        image: '/portfolio/flask.png',
+        demoUrl: ['https://gitlab.com/ralf02/restaurant-flask-nextjs'],
+        tags: ['Flask', 'Next.js', 'Python', 'PostgreSQL','GitLab CI/CD','Docker']
       }
     ]
   };
@@ -196,7 +208,7 @@ function App() {
                 {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
                   <div className="mt-3">
                     <div className="flex justify-between items-start">
-                      <div>
+                      <div className='w-5/6'>
                         <h4 className="mb-1.5 text-lg font-semibold text-gray-900">
                           {portfolioDetails[selectedPortfolio.title][currentSlide].title}
                         </h4>
@@ -214,16 +226,21 @@ function App() {
                           ))}
                         </div>
                       </div>
-                      {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl ? (
-                        <a
-                          href={portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center px-2.5 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg transition-colors hover:bg-gray-200"
-                        >
-                          <Globe className="mr-1.5 w-4 h-4" />
-                          Demo
-                        </a>
+                      {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl && portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl.length > 0 ? (
+                        <div className="flex flex-col gap-2">
+                          {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl.map((url, idx) => (
+                            <a
+                              key={idx}
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center px-3 py-1 text-xs text-gray-700 bg-gray-100 rounded-lg transition-colors font-sm hover:bg-gray-200"
+                            >
+                              <Globe className="mr-1.5 w-4 h-4" />
+                              Demo {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl.length > 1 ? idx + 1 : ''}
+                            </a>
+                          ))}
+                        </div>
                       ) : (
                         <span className="inline-flex items-center px-2.5 py-1 text-sm font-medium text-gray-500 bg-gray-50 rounded-lg transition-colors">
                           <Lock className="mr-1.5 w-4 h-4" />
