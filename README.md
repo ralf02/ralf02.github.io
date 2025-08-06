@@ -13,13 +13,12 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ## Habilidades en Stacks Tecnológicos
 
-- **Frontend**: React, Next.js, TailwindCSS, shadcn/ui, Angular
-- **Backend**: NestJS, Node.js, Express, Laravel, PHP, Java SpringBoot
-- **DevOps**: Docker, Docker Swarm, K8s, GitLab CI/CD, Vault, NGINX, Linux (Debian, CentOS)
+- **Frontend**: React, Next.js, TailwindCSS, shadcn/ui, JQuery, Bootstrap
+- **Backend**: Node.js, NestJS,  Express, Laravel, PHP, Python, Java SpringBoot
+- **DevOps**: Docker Swarm, K8s, GitLab CI/CD, Vault, Terraform, Ansible, Linux (Debian, CentOS)
 - **Bases de Datos**: PostgreSQL, MariaDB, MongoDB, Supabase, ElasticSearch
-- **Streaming**: Wowza Streaming Engine, Video.js, FFmpeg
-- **Testing y QA**: Cypress, Postman, PhpUnit, Vegeta
-- **Herramientas extra**: Git, GitLab, Terraform, Ansible
+- **Streaming**: Wowza Streaming Engine, Video.js, FFmpeg, Agora
+- **Testing y QA**: Cypress, Postman, PhpUnit, Vegeta, Pytest
 
 ---
 
@@ -84,15 +83,15 @@ Exploro soluciones en la nube con AWS, Kubernetes y Terraform. Profundizo en el 
 ## Tecnologías
 
 ### Desarrollo Web
-- Frontend: React, Next.js, HTML, CSS, JavaScript
-- Backend: PHP (Laravel), Node.js, Java
+- Frontend: React, Next.js, HTML, CSS, JavaScript, Bootstrap
+- Backend: PHP (Laravel), Node.js, Java, Python, FastAPI
 - CMS: Drupal, WordPress
 - Bases de datos: MySQL, Elasticsearch
 
 ### DevOps
 - Orquestación: Kubernetes, Docker Swarm
 - CI/CD: GitLab CI/CD
-- Automatización: Ansible, Shell Scripting
+- Automatización: Terraform, Ansible, Shell Scripting
 - Cloud: AWS
 
 ### Laboratorio

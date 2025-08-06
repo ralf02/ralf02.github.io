@@ -64,8 +64,22 @@ function App() {
         title: 'Despliegue FullStack',
         description: 'Demostracion del flujo DevOps en GitLab para un aplicativo en desarrollo.',
         image: '/portfolio/ci-cd.jpg',
-        demoUrl: ['https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines/1837004799'],
+        demoUrl: ['https://gitlab.com/ralf02/lumen.headless.hotel/-/pipelines'],
         tags: ['GitLab CI/CD', 'AWS', 'Laravel', 'PHP', 'Node.js', 'Next.js']
+      },
+      {
+        title: 'Despliegue Wep App FullStack',
+        description: 'Demostracion del flujo DevOps en GitLab para una Web app.',
+        image: '/portfolio/webapp.png',
+        demoUrl: ['https://gitlab.com/ralf02/restaurant-flask-nextjs/-/pipelines'],
+        tags: ['GitLab CI/CD', 'AWS', 'Docker', 'Python', 'Flask', 'PostgreSQL']
+      },
+      {
+        title: 'Base Kubernetes',
+        description: 'Configuración de cluster Kubernetes para desarrollo y producción.',
+        image: '/portfolio/kub.jpg',
+        demoUrl: ['https://github.com/ralf02/k8s-ansible-aws'],
+        tags: ['K8s',  'AWS', 'Shell Scripting', 'Terraform', 'Ansible']
       },
     ],
     'Desarrollo Web': [
@@ -104,7 +118,7 @@ function App() {
         description: 'Configuración de cluster Kubernetes para desarrollo y producción.',
         image: '/portfolio/kub.jpg',
         demoUrl: ['https://github.com/ralf02/k8s-ansible-aws'],
-        tags: ['Kubernetes', 'Ansible', 'AWS', 'Shell Scripting']
+        tags: ['Kubernetes', 'Ansible', 'AWS', 'Shell Scripting', 'Terraform']
       },
       {
         title: 'Agentes IA',
@@ -346,17 +360,17 @@ function App() {
               {
                 title: 'DevOps',
                 icon: Server,
-                skills: ['Docker', 'Docker Swarm', 'K8s', 'GitLab CI/CD', 'Vault', 'NGINX', 'Linux']
+                skills: ['Docker Swarm', 'K8s', 'GitLab CI/CD', 'Vault', 'Linux', 'Ansible', 'Terraform']
               },
               {
                 title: 'Backend',
                 icon: Code2,
-                skills: ['NestJS', 'Node.js', 'Express', 'Laravel', 'PHP', 'Java SpringBoot']
+                skills: ['NestJS', 'Node.js', 'Laravel', 'PHP', 'Java SpringBoot', 'Python', 'FastAPI']
               },
               {
                 title: 'Frontend',
                 icon: Layout,
-                skills: ['React', 'Next.js', 'TailwindCSS', 'shadcn/ui', 'Angular']
+                skills: ['React', 'Next.js', 'TailwindCSS', 'shadcn/ui', 'JQuery', 'Bootstrap', 'ReactNative']
               },
               {
                 title: 'Bases de Datos',
@@ -366,12 +380,12 @@ function App() {
               {
                 title: 'Streaming',
                 icon: Video,
-                skills: ['Wowza Streaming Engine', 'Video.js', 'FFmpeg']
+                skills: ['Wowza Streaming Engine', 'Video.js', 'FFmpeg', 'Agora', 'Raspberry Pi']
               },
               {
                 title: 'Testing y QA',
                 icon: TestTube2,
-                skills: ['Cypress', 'Postman', 'PhpUnit', 'Vegeta']
+                skills: ['Cypress', 'Postman', 'PhpUnit', 'Vegeta', 'Pytest']
               }
             ].map((category) => (
               <div key={category.title} className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
@@ -479,9 +493,10 @@ function App() {
         </section>
       </main>
 
-      <footer className="py-8 text-white bg-gray-900">
-        <div className="container px-4 mx-auto text-center">
-          <p>© {new Date().getFullYear()} Rafael Contreras</p>
+      <footer className="pt-10 pb-8 text-white bg-gray-900 border-t border-gray-800">
+        <div className="container flex flex-col gap-4 items-center px-4 mx-auto">
+          <p className="text-sm italic text-gray-300">Disponible para proyectos freelance, consultoría o contratación remota full time.</p>
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Rafael Contreras</p>
         </div>
       </footer>
     </div>
