@@ -1,5 +1,5 @@
 # Rafael Contreras
-**Software Engineer | DevOps | FullStack Developer | PHP | Node.js | Python | Java **
+Software Engineer | DevOps | FullStack Developer | PHP | Node.js | Python | Java
 
 ---
 
@@ -11,7 +11,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ---
 
-## Habilidades en Stacks Tecnológicos
+## Stack Tecnológico
 
 - **Frontend**: React, Next.js, TailwindCSS, shadcn/ui, JQuery, Bootstrap
 - **Backend**: Node.js, NestJS,  Express, Laravel, PHP, Python, Java SpringBoot
