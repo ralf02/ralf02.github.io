@@ -162,14 +162,14 @@ function App() {
     <div className="min-h-screen bg-white text-gray-900 font-['Work_Sans']">
       {/* Portfolio Modal */}
       {selectedPortfolio && (
-        <div className="flex fixed inset-0 z-50 justify-center items-center bg-black/50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="relative w-full max-w-2xl max-h-[90vh] mx-4 bg-white rounded-lg shadow-xl">
             {/* Modal Header */}
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex items-center justify-between p-3 border-b">
               <h3 className="text-lg font-semibold text-gray-900">{selectedPortfolio.title}</h3>
               <button
                 onClick={() => setSelectedPortfolio(null)}
-                className="p-1 text-gray-500 rounded-full transition-colors hover:bg-gray-100"
+                className="p-1 text-gray-500 transition-colors rounded-full hover:bg-gray-100"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -179,7 +179,7 @@ function App() {
             <div className="p-3 overflow-y-auto max-h-[calc(90vh-8rem)]">
               <div className="relative">
                 {/* Carousel */}
-                <div className="overflow-hidden relative rounded-lg">
+                <div className="relative overflow-hidden rounded-lg">
                   {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
                     <>
                       <div className="relative aspect-video">
@@ -189,7 +189,7 @@ function App() {
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="flex absolute inset-0 justify-between items-center p-2">
+                      <div className="absolute inset-0 flex items-center justify-between p-2">
                         <button
                           onClick={prevSlide}
                           className="p-1.5 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
@@ -221,7 +221,7 @@ function App() {
                 {/* Content */}
                 {selectedPortfolio && portfolioDetails[selectedPortfolio.title] && (
                   <div className="mt-3">
-                    <div className="flex justify-between items-start">
+                    <div className="flex items-start justify-between">
                       <div className='w-5/6'>
                         <h4 className="mb-1.5 text-lg font-semibold text-gray-900">
                           {portfolioDetails[selectedPortfolio.title][currentSlide].title}
@@ -248,7 +248,7 @@ function App() {
                               href={url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center px-3 py-1 text-xs text-gray-700 bg-gray-100 rounded-lg transition-colors font-sm hover:bg-gray-200"
+                              className="inline-flex items-center px-3 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-lg font-sm hover:bg-gray-200"
                             >
                               <Globe className="mr-1.5 w-4 h-4" />
                               Demo {portfolioDetails[selectedPortfolio.title][currentSlide].demoUrl.length > 1 ? idx + 1 : ''}
@@ -276,36 +276,36 @@ function App() {
       )}
 
       {/* Floating Social Menu */}
-      <div className="hidden fixed right-8 top-1/2 z-50 flex-col gap-4 -translate-y-1/2 md:flex">
+      <div className="fixed z-50 flex-col hidden gap-4 -translate-y-1/2 right-8 top-1/2 md:flex">
         {socialLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex relative justify-center items-center w-12 h-12 text-white bg-gray-900 rounded-full shadow-lg transition-colors group hover:bg-gray-800"
+            className="relative flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-900 rounded-full shadow-lg group hover:bg-gray-800"
             aria-label={link.label}
           >
             <link.icon className="w-6 h-6" />
-            <span className="absolute right-full px-3 py-2 mr-3 text-sm font-medium text-white whitespace-nowrap bg-gray-900 rounded-lg border border-gray-700 shadow-lg opacity-0 transition-all duration-200 group-hover:opacity-100">
+            <span className="absolute px-3 py-2 mr-3 text-sm font-medium text-white transition-all duration-200 bg-gray-900 border border-gray-700 rounded-lg shadow-lg opacity-0 right-full whitespace-nowrap group-hover:opacity-100">
               <span className="text-gray-400">{link.label}</span>
               <span className="mx-1 text-gray-500">:</span>
               <span className="text-white">{link.val}</span>
-              <span className="absolute -right-1 top-1/2 w-2 h-2 bg-gray-900 border-r border-b border-gray-700 rotate-45 -translate-y-1/2"></span>
+              <span className="absolute w-2 h-2 rotate-45 -translate-y-1/2 bg-gray-900 border-b border-r border-gray-700 -right-1 top-1/2"></span>
             </span>
           </a>
         ))}
       </div>
 
       {/* Mobile Social Menu */}
-      <div className="flex fixed right-0 bottom-0 left-0 z-50 gap-4 justify-center p-4 bg-gray-900 md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center gap-4 p-4 bg-gray-900 md:hidden">
         {socialLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-center w-10 h-10 text-white bg-gray-800 rounded-full shadow-lg transition-colors hover:bg-gray-700"
+            className="flex items-center justify-center w-10 h-10 text-white transition-colors bg-gray-800 rounded-full shadow-lg hover:bg-gray-700"
             aria-label={link.label}
           >
             <link.icon className="w-5 h-5" />
@@ -314,13 +314,13 @@ function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="flex relative justify-center items-center h-screen bg-gray-900">
+      <section className="relative flex items-center justify-center h-screen bg-gray-900">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="object-cover absolute inset-0 w-full h-full"
+          className="absolute inset-0 object-cover w-full h-full"
         >
           <source src="/large.mp4" type="video/mp4" />
         </video>
@@ -329,10 +329,10 @@ function App() {
           <img
             src="/foto.jpg"
             alt="Foto de perfil"
-            className="object-cover mx-auto mb-8 w-80 h-80 rounded-full border-4 border-white shadow-lg"
+            className="object-cover mx-auto mb-8 border-4 border-white rounded-full shadow-lg w-80 h-80"
           />
           <h1 className="mb-4 text-5xl font-bold text-white">Rafael Contreras</h1>
-          <p className="text-xl text-gray-300">Software Engineer | DevOps | FullStack Developer</p>
+          <p className="text-xl text-gray-300">Systems Engineer | FullStack Developer | DevOps</p>
         </div>
       </section>
 
@@ -340,7 +340,7 @@ function App() {
         {/* About Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Sobre mí</h2>
-          <div className="mx-auto max-w-3xl text-lg text-gray-700">
+          <div className="max-w-3xl mx-auto text-lg text-gray-700">
             <p className="mb-4">
               Hola mundo, soy desarrollador web con sólida experiencia en el diseño, desarrollo y despliegue de aplicaciones.
               Domino stacks como LEMP, MEAN y Java SpringBoot, tengo experiencia en DevOps con Docker y GitLab CI/CD.
@@ -355,7 +355,7 @@ function App() {
         {/* Skills Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Skills Tecnológicos</h2>
-          <div className="grid gap-8 mx-auto max-w-5xl md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid max-w-5xl gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: 'DevOps',
@@ -388,8 +388,8 @@ function App() {
                 skills: ['Cypress', 'Postman', 'PhpUnit', 'Vegeta', 'Pytest']
               }
             ].map((category) => (
-              <div key={category.title} className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
-                <div className="flex gap-3 items-center mb-4">
+              <div key={category.title} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+                <div className="flex items-center gap-3 mb-4">
                   <category.icon className="w-6 h-6 text-gray-900" />
                   <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
                 </div>
@@ -406,12 +406,12 @@ function App() {
         {/* Portfolio Section with Grid */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Portafolio</h2>
-          <div className="grid gap-8 mx-auto max-w-6xl md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid max-w-6xl gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedPortfolio(item)}
-                className="overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md transition-shadow cursor-pointer hover:shadow-lg"
+                className="overflow-hidden transition-shadow bg-white border border-gray-200 rounded-lg shadow-md cursor-pointer hover:shadow-lg"
               >
                 <div className="relative aspect-video">
                   <img
@@ -442,7 +442,7 @@ function App() {
         {/* Experience Section */}
         <section className="mb-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Experiencia Destacada</h2>
-          <div className="mx-auto space-y-8 max-w-3xl">
+          <div className="max-w-3xl mx-auto space-y-8">
             {[
               {
                 title: 'Plataforma CI/CD con Docker Swarm y GitLab',
@@ -472,8 +472,8 @@ function App() {
                 ]
               }
             ].map((exp, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
-                <div className="flex justify-between items-center mb-4">
+              <div key={index} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+                <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
                   <span className="px-3 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-full">
                     {exp.company}
@@ -494,7 +494,7 @@ function App() {
       </main>
 
       <footer className="pt-10 pb-8 text-white bg-gray-900 border-t border-gray-800">
-        <div className="container flex flex-col gap-4 items-center px-4 mx-auto">
+        <div className="container flex flex-col items-center gap-4 px-4 mx-auto">
           <p className="text-sm italic text-gray-300">Disponible para proyectos freelance, consultoría o contratación remota full time.</p>
           <p className="text-xs text-gray-400">© {new Date().getFullYear()} Rafael Contreras</p>
         </div>

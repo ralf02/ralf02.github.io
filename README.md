@@ -1,5 +1,5 @@
 # Rafael Contreras
-**Software Engineer | DevOps | FullStack Developer | PHP | Node.js | Python | Java **
+**Systems Engineer | FullStack Developer | DevOps**
 
 ---
 
