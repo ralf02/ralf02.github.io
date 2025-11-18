@@ -1,8 +1,6 @@
 # Rafael Contreras
 **Systems Engineer | FullStack Developer | DevOps**
 
----
-
 ## Sobre mí
 
 Hola mundo, Soy desarrollador web con sólida de experiencia en el diseño, desarrollo y despliegue de aplicaciones. Domino stacks como **LEMP, MEAN y Java SpringBoot**, tengo experiencia en **DevOps con Docker y GitLab CI/CD**.
@@ -11,7 +9,7 @@ He trabajado en proyectos de alto impacto, optimizando pipelines de integración
 
 ---
 
-## Habilidades en Stacks Tecnológicos
+## Stack Tecnológico
 
 - **Frontend**: React, Next.js, TailwindCSS, shadcn/ui, JQuery, Bootstrap
 - **Backend**: Node.js, NestJS,  Express, Laravel, PHP, Python, Java SpringBoot
