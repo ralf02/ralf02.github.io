@@ -283,7 +283,7 @@ function App() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-900 rounded-full shadow-lg group hover:bg-gray-800"
+            className="relative flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-900 rounded-full shadow-lg group hover:bg-red-600"
             aria-label={link.label}
           >
             <link.icon className="w-6 h-6" />
@@ -305,7 +305,7 @@ function App() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 text-white transition-colors bg-gray-800 rounded-full shadow-lg hover:bg-gray-700"
+            className="flex items-center justify-center w-10 h-10 text-white transition-colors bg-gray-800 rounded-full shadow-lg hover:bg-red-600"
             aria-label={link.label}
           >
             <link.icon className="w-5 h-5" />
@@ -342,7 +342,7 @@ function App() {
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-900">Sobre mí</h2>
           <div className="max-w-3xl mx-auto text-lg text-gray-700">
             <p className="mb-4">
-              Hola mundo, soy desarrollador web con sólida experiencia en el diseño, desarrollo y despliegue de aplicaciones.
+              Software developer con sólida experiencia en el diseño, desarrollo y despliegue de aplicaciones.
               Domino stacks como LEMP, MEAN y Java SpringBoot, tengo experiencia en DevOps con Docker y GitLab CI/CD.
             </p>
             <p>
@@ -445,8 +445,24 @@ function App() {
           <div className="max-w-3xl mx-auto space-y-8">
             {[
               {
+                title: 'Customization Internal Development Platform',
+                company: 'IBM',
+                items: [
+                  'Extensión y desarrollo de componentes personalizados en Backstage, creando módulos reutilizables.',
+                  'Automatización procesos DevOps e infraestructura, desarrollando un módulo para la creación automática de proyectos y tableros en Jira como también participando en el desarrollo del generador de Infraestructura como Código con Terraform y OpenIA.',
+                ]
+              },
+              {
+                title: 'Forward Deployed Engineer',
+                company: 'LOGIC IDEAS',
+                items: [
+                  'Diseño y desarrollo soluciones de extremo a extremo para necesidades de negocio, construyendo aplicaciones web y móviles con React, React Native, FastAPI e integrando servicios de IA generativa (OpenAI y Gemini).',
+                  'Integracion y extencion plataformas empresariales mediante desarrollos personalizados, creando plugins para WordPress/WooCommerce y soluciones de análisis automatizado de datos provenientes de redes sociales, transformando información en insights accionables para la toma de decisiones.'
+                ]
+              },
+              {
                 title: 'Plataforma CI/CD con Docker Swarm y GitLab',
-                company: 'Ilumno',
+                company: 'ILUMNO',
                 items: [
                   'Implementación de CI/CD multiplataforma con GitLab Runner sin instalación local.',
                   'Automatización de despliegues en entornos dev/qa/uat.',
@@ -455,7 +471,7 @@ function App() {
               },
               {
                 title: 'Aplicaciones Web',
-                company: 'Bwired',
+                company: 'BWIRED',
                 items: [
                   'Desarrollo de dashboards e interfaces interactivas con Next.js, Angular y shadcn/ui.',
                   'Integración de APIs REST con Supabase y Stripe.'
@@ -464,7 +480,7 @@ function App() {
               ,
               {
                 title: 'Sistema de Streaming Portable con Raspberry Pi',
-                company: 'Multistream',
+                company: 'MULTISTREAM',
                 items: [
                   'Desarrollo de sistema de transmisión estable online/offline usando Raspbian y Wowza/NGINX.',
                   'Gestión de medios locales y adaptación en entornos de baja conectividad.',
